@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy and build with ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd ${{ secrets.DIR }}
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
+          git pull origin master
+          git status
+          nvm use 20.7
+          npm ci
+          npm run build
