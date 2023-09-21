@@ -5,5 +5,18 @@
 body {
     margin: 0;
     padding: 0;
-    background: #E5E5E5;
+    background: #F3F7FA;
+    color: #4a4a4a;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
