@@ -46,17 +46,21 @@ const preparedTickets = computed(() => {
     });
 
     if(options.sort === 'cheapest') {
-        const sorted = filteredTickets.sort((a, b) => {
+        return filteredTickets.sort((a, b) => {
             return a.price - b.price;
         });
-        return sorted;
     }
 
     if(options.sort === 'fastest') {
-        const sorted = filteredTickets.sort((a, b) => {
+        return filteredTickets.sort((a, b) => {
             return a.totalDuration - b.totalDuration;
         });
-        return sorted;
+    }
+
+    if(options.sort === 'optimal') {
+        return filteredTickets.sort((a, b) => {
+            return (a.price + a.totalDuration) - (b.price + b.totalDuration);
+        });
     }
     
 });

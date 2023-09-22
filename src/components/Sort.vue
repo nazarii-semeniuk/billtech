@@ -12,6 +12,12 @@
                 Найшвидший
             </span>
         </label>
+        <label class="sort__item">
+            <input class="input" type="radio" name="sort" value="optimal" v-model="sort">
+            <span class="button">
+                Оптимальний
+            </span>
+        </label>
     </div>
 </template>
 
@@ -76,6 +82,16 @@ watchEffect(() => {
         &:nth-last-child(1) {
             .button {
                 border-radius: 0 10px 10px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sort {
+        &__item {
+            .button {
+                font-size: 10px;
             }
         }
     }
