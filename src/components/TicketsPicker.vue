@@ -27,6 +27,10 @@ const options = reactive({
     filter: []
 });
 
+// Maybe it's a good idea to move this logic to some kind of 'TicketsService' class
+// or tickets store (vuex, pinia) to make it more testable and reusable
+// But i decided to not to use any state management libraries for such a small app
+
 const preparedTickets = computed(() => {
 
     const filteredTickets = tickets.filter((ticket) => {
