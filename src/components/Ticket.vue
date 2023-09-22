@@ -105,10 +105,12 @@ const calculateArivalTime = (date, duration) => {
                     font-size: 12px;
                     color: #A0B0B9;
                     text-transform: uppercase;
+                    line-height: 150%;
                 }
 
                 .value {
                     font-size: 14px;
+                    line-height: 150%;
                 }
             }
         }
