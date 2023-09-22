@@ -29,7 +29,7 @@
 
 <script setup>
 
-import { ref, defineEmits, watchEffect } from 'vue';
+import { ref, watchEffect } from 'vue';
 
 import formatNounForNumber from '../utils/formatNounForNumber';
 
