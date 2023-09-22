@@ -116,4 +116,23 @@ const calculateArivalTime = (date, duration) => {
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .ticket {
+        &__head {
+            .price {
+                font-size: 20px;
+            }
+        }
+        &__body {
+            .segment {
+                &__column {
+                    .value {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

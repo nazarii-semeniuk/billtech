@@ -92,4 +92,19 @@ const sortChanged = (sort) => {
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .tickets-picker {
+        flex-direction: column;
+
+        &__filter {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__main {
+            width: 100%;
+        }
+    }
+}
 </style>
